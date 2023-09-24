@@ -2,7 +2,7 @@
 
 const req = require('request');
 const fs = require('fs');
-req(process.argv[2], (error, content) => {
+req(process.argv[2], function (error, content) {
   if (error) {
     console.error(error);
   }
