@@ -8,8 +8,8 @@ req(process.argv[2], (error, content) => {
     console.error(error);
   }
   const jason = JSON.parse(content.body).results;
-  for (x in jason) {
-    for (y in x.characters) {
+  for (const x of jason) {
+    for (const y of x.characters) {
       if (y.includes('18')) {
         count++;
       }
